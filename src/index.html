@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script src="vue.js"></script>
+    <script src="tailwindcss.js"></script>
+    <title>Vue Basics</title>
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
+    <page-nav
+      v-bind:pages="pages"
+      v-bind:active-page="activePage"
+      v-bind:click-nav-link="(index)=>activePage=index"
+    ></page-nav>
+    <page-body v-bind:page="pages[activePage]"></page-body>
+    <page-footer></page-footer>
+    <script src="app.js"></script>
+  </body>
+</html>
